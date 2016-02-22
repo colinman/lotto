@@ -1,0 +1,3 @@
+curl www.powerball.com | grep "balls" -A 10 | sed -e 's/<[^<]*>//g' | sed -e 's/Winning Numbers//g' | sed -e 's/ //g' | sed '/^\s*$/d' > lotto.txt
+echo $numbers
+# perl -e 'use JSON; @in=grep(s/\n$//, <>); print encode_json(\@in)."\n";'
